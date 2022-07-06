@@ -6,24 +6,30 @@
 
 body {
     background-color: azure;
-    display: grid;
-    place-items: center;
+}
+
+main{
     height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .grid-container {
     display: grid;
-    grid-template-areas: "a a b"
-                        "c d d";
+    grid-template-areas:
+        "a a b"
+        "c d d"
+        "c e e";
     gap: 10px;
-    height: 400px;
-    width: 400px;
-    grid-template-columns: 1fr 1fr 1fr;
+    padding: 10px;
+    grid-template-columns: 220px 150px 210px;
+    grid-template-rows: 180px 90px 120px;
 }
 
-main div {
+main > div {
     padding: 2em;
-    text-align: center;
 }
 
 .item-a {
@@ -39,6 +45,7 @@ main div {
 .item-c {
     background-color: #05aa42;
     grid-area: c;
+    width: 100%;
 }
 
 .item-d {
@@ -50,52 +57,4 @@ main div {
 .item-e {
     background-color: #01aefd;
     grid-area: e;
-}
-
-.item-f {
-    background-color: #01aefd;
-    grid-area: f;
-}
-
-section{
-    display: grid;
-    grid-template-areas:
-        "item1 item1 item2"
-        "item3 item4 item4"
-        "item3 item5 item5";
-    gap: 10px;
-    padding: 10px;
-    
-    
-    grid-template-columns: 220px 150px 210px;
-    grid-template-rows: 180px 90px 120px;
-}
-
-section > div{
-    padding: 2em;
-}
-
-.item1{
-    background-color: orangered;
-    grid-area: item1;
-}
-
-.item2{
-    background-color: orange;
-    grid-area: item2;
-}
-
-.item3{
-    background-color: greenyellow;
-    grid-area: item3;
-}
-
-.item4{
-    background-color: blue;
-    grid-area: item4;
-}
-
-.item5{
-    background-color: blue;
-    grid-area: item5;
 }

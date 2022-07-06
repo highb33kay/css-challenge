@@ -12,6 +12,7 @@ main{
     width: 100%;
     margin: auto;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -24,7 +25,11 @@ main{
     width: 100%;
 }
 
-
+.lower{
+    font-size: 40px;
+    display: flex;
+    flex-direction: column;
+}
 
 .box-container h1{
     color: white;
@@ -89,4 +94,10 @@ button:hover{
 img{
     height: 2rem;
     object-fit: contain;
+}
+
+@media screen and (max-width: 600px){
+    .box-container{
+        flex-direction: column;
+    }
 }
